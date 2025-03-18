@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #121212; */
+}
+
+.main {
+    position: relative;
+    width: 32rem;
+    max-width: 100%;
+
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+/* ✅ Numbers ko exact frame ke andar set karenge */
+.numbers {
+    position: absolute;
+    top: 38%;  /* Frame ke andar adjust */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    gap: 30px;
+    color: white;
+    background-color: aqua;
+    font-size: 7rem;
+}
+
+/* ✅ Milliseconds ko adjust karenge */
+.Msec {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1rem;
+}
+
+/* ✅ Buttons ko frame ke andar properly adjust */
+.btn {
+    position: absolute;
+    bottom: 10%;  /* Frame ke andar adjust */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+/* ✅ Mobile Fix (Screen Choti ho to Adjust ho) */
+@media only screen and (max-width: 380px) {
+    .main {
+        width: 20rem;  /* Mobile ke liye choti width */
+    }
+
+    .numbers {
+        font-size: 5rem;
+        gap: 20px;
+        top: 38%;
+    }
+
+    .Msec {
+        font-size: 1rem;
+        top: 63%;
+    }
+
+    .btn {
+        gap: 15px;
+        bottom: 8%;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
